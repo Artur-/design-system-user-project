@@ -1,0 +1,6 @@
+#java-view {
+  display: block;
+}
+:host {
+  display: block;
+}
