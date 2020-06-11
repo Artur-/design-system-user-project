@@ -3,8 +3,6 @@ import { Router } from "@vaadin/router";
 
 import "@vaadin/flow-frontend/my-design-system/design-system";
 
-import "./global-styles";
-
 const { serverSideRoutes } = new Flow({
   imports: () => import("../target/frontend/generated-flow-imports"),
 });
