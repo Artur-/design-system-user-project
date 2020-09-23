@@ -1,5 +1,24 @@
 import { Flow } from "@vaadin/flow-frontend/Flow";
 import { Router } from "@vaadin/router";
+// @ts-ignore
+import { applyTheme } from "@vaadin/flow-frontend/theme/applicationTheme.js";
+
+export const addCssBlock = function (block: string, before = false) {
+  const tpl = document.createElement("template");
+  tpl.innerHTML = block;
+  //@ts-ignore
+  document.head[before ? "insertBefore" : "appendChild"](
+    tpl.content,
+    document.head.firstChild
+  );
+};
+
+addCssBlock(
+  '<custom-style><style include="lumo-color lumo-typography"></style></custom-style>',
+  true
+);
+
+applyTheme(document);
 
 const { serverSideRoutes } = new Flow({
   imports: () => import("../target/frontend/generated-flow-imports"),

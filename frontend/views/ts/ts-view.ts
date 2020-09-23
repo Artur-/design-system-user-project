@@ -5,6 +5,8 @@ import "@vaadin/vaadin-text-field";
 import "acme-component/fill-indicator";
 import "acme-component/my-button";
 import { css, customElement, html, LitElement } from "lit-element";
+// @ts-ignore
+import { applyTheme } from "theme/applicationTheme.js";
 
 @customElement("ts-view")
 export class TSView extends LitElement {
@@ -35,5 +37,10 @@ export class TSView extends LitElement {
         ><vaadin-chart empty-text=" "></vaadin-chart
       ></vaadin-vertical-layout>
     `;
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    applyTheme(this.shadowRoot);
   }
 }
