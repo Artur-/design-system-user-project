@@ -55,6 +55,7 @@ devDependencies:
   copy-webpack-plugin: 5.1.1_webpack@4.42.0
   css-loader: 4.2.1_webpack@4.42.0
   extract-loader: 5.1.0
+  file-loader: 6.1.0_webpack@4.42.0
   glob: 7.1.6
   html-webpack-plugin: 3.2.0_webpack@4.42.0
   lit-css-loader: 0.0.4
@@ -4062,6 +4063,18 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-OrGi0qYsi/tDGgyUy3l6L84nyWI=
+  /file-loader/6.1.0_webpack@4.42.0:
+    dependencies:
+      loader-utils: 2.0.0
+      schema-utils: 2.7.1
+      webpack: 4.42.0_webpack@4.42.0
+    dev: true
+    engines:
+      node: '>= 10.13.0'
+    peerDependencies:
+      webpack: ^4.0.0 || ^5.0.0
+    resolution:
+      integrity: sha512-26qPdHyTsArQ6gU4P1HJbAbnFTyT2r0pG7czh1GFAd9TZbj0n94wWbupgixZH/ET/meqi2/5+F7DhW4OAXD+Lg==
   /fill-range/4.0.0:
     dependencies:
       extend-shallow: 2.0.1
@@ -7813,6 +7826,7 @@ specifiers:
   copy-webpack-plugin: 5.1.1
   css-loader: 4.2.1
   extract-loader: 5.1.0
+  file-loader: 6.1.0
   glob: ^7.1.6
   html-webpack-plugin: 3.2.0
   lit-css-loader: 0.0.4
