@@ -4,6 +4,8 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.charts.Chart;
 import com.vaadin.flow.component.charts.model.ChartType;
 import com.vaadin.flow.component.charts.model.ListSeries;
+import com.vaadin.flow.component.html.Image;
+import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
@@ -22,7 +24,14 @@ public class JavaView extends VerticalLayout {
         TextField fancy = new TextField("This is a class=fancy text field");
         fancy.addClassName("fancy");
         add(fancy);
-        add(new Button("Standard button", e -> Notification.show("Hello")));
+        Span camera = new Span();
+        camera.addClassNames("fas", "fa-camera");
+
+        add(new Button("Standard button", camera, e -> Notification.show("Hello")));
+        add(new Span("A Font Awesome icon loaded as an external SVG:"));
+        Image svgImage = new Image("fa/svg/file-pdf.svg", "");
+        svgImage.setWidth("64px");
+        add(svgImage);
         add(new MyButton("My button", e -> Notification.show("Hello")));
         FillIndicator fill = new FillIndicator();
         fill.addClickListener(e -> {

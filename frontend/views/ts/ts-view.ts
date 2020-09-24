@@ -31,8 +31,10 @@ export class TSView extends LitElement {
           label="This is a class=fancy text field"
         ></vaadin-text-field
         ><vaadin-button tabindex="0" role="button"
-          >Standard button</vaadin-button
-        ><my-button tabindex="0" role="button">My button</my-button
+          ><i class="fas fa-camera"></i> Standard button</vaadin-button
+        >A Font Awesome icon loaded as an external SVG:
+        <img style="width:64px" src="fa/svg/file-pdf.svg" />
+        <my-button tabindex="0" role="button">My button</my-button
         ><fill-indicator></fill-indicator
         ><vaadin-chart empty-text=" "></vaadin-chart
       ></vaadin-vertical-layout>
