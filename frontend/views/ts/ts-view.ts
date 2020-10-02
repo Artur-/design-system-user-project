@@ -6,7 +6,7 @@ import "acme-component/fill-indicator";
 import "acme-component/my-button";
 import { css, customElement, html, LitElement } from "lit-element";
 // @ts-ignore
-import { applyTheme } from "theme/applicationTheme.js";
+import { applyTheme } from "theme/theme.js";
 
 @customElement("ts-view")
 export class TSView extends LitElement {

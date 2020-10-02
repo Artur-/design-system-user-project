@@ -1,7 +1,7 @@
 import { Flow } from "@vaadin/flow-frontend/Flow";
 import { Router } from "@vaadin/router";
 // @ts-ignore
-import { applyTheme } from "@vaadin/flow-frontend/theme/applicationTheme.js";
+import { applyTheme } from "@vaadin/flow-frontend/theme/theme.js";
 
 export const addCssBlock = function (block: string, before = false) {
   const tpl = document.createElement("template");
